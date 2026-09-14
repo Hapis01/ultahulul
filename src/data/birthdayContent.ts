@@ -13,6 +13,7 @@ import type {
   FinalSurpriseData,
   FinalLetterData,
 } from '../types/birthday';
+import { getAssetUrl } from '../utils/assetUrl';
 
 /**
  * =======================================================================
@@ -37,7 +38,7 @@ export const birthdayConfig: BirthdayConfig = {
 export const musicConfig: MusicConfig = {
   title: 'Untuk Ulul, Sayangku',
   artist: 'Special Birthday Song',
-  file: '/music/birthday.mp3',
+  file: getAssetUrl('music/birthday.mp3'),
 };
 
 export const openingContent = {
@@ -77,7 +78,7 @@ export const introMessageContent = {
 export const memoriesContent: MemoryItem[] = [
   {
     id: 1,
-    image: '/images/memories/photo-01.jpg',
+    image: getAssetUrl('images/memories/photo-01.jpg'),
     title: 'Pertama Kali Berinteraksi',
     date: 'Awal Percakapan',
     caption: 'Ini awal kita chatingan ya berinteraksi, ya karena HEEMPEEES.',
@@ -85,7 +86,7 @@ export const memoriesContent: MemoryItem[] = [
   },
   {
     id: 2,
-    image: '/images/memories/photo-02.jpg',
+    image: getAssetUrl('images/memories/photo-02.jpg'),
     title: 'Pertama Kali Fotbar',
     date: 'Foto Masih Malu2',
     caption: 'Fotbar pertama kali setelah kita kenal.',
@@ -93,7 +94,7 @@ export const memoriesContent: MemoryItem[] = [
   },
   {
     id: 3,
-    image: '/images/memories/photo-03.jpg',
+    image: getAssetUrl('images/memories/photo-03.jpg'),
     title: 'Terakhir foto sebelum HMPS bubar',
     date: 'Ini juga masih malu2',
     caption: 'Kita yang foto mereka yang heboh.',
@@ -101,7 +102,7 @@ export const memoriesContent: MemoryItem[] = [
   },
   {
     id: 4,
-    image: '/images/memories/photo-04.jpg',
+    image: getAssetUrl('images/memories/photo-04.jpg'),
     title: 'Bukber versi kita',
     date: 'Kemana mana',
     caption: 'Bukber pertama kita bareng, karena kamu sendirian bukber dirumah jadi kasian.',
@@ -109,7 +110,7 @@ export const memoriesContent: MemoryItem[] = [
   },
   {
     id: 5,
-    image: '/images/memories/photo-05.jpg',
+    image: getAssetUrl('images/memories/photo-05.jpg'),
     title: 'Photobox cieee',
     date: 'Pertama kali nich',
     caption: 'Ini request dari seseorang yang tiba-tiba ngajak photobox.',
@@ -117,7 +118,7 @@ export const memoriesContent: MemoryItem[] = [
   },
   {
     id: 6,
-    image: '/images/memories/photo-06.jpg',
+    image: getAssetUrl('images/memories/photo-06.jpg'),
     title: 'Makasi Sayang',
     date: 'Hari Terakhir Mahasiswa',
     caption: 'Ini kenangan yang ga bakal abang lupain.',
@@ -219,7 +220,7 @@ export const memoryGameCards: MemoryGameCardItem[] = [
     isSpecial: true,
     message: 'Ketemu! 🎉 Kamu menemukan kejutan rahasia!',
     specialTitle: 'Kamu Selalu Bersinar',
-    specialPhoto: '/images/memories/photo-02.jpg',
+    specialPhoto: getAssetUrl('images/memories/photo-02.jpg'),
     specialNote: 'Seperti kartu ini yang bersinar di antara yang lain, begitulah kamu selalu menerangi hariku.',
   },
   {
@@ -277,7 +278,7 @@ export const specialPhotoData: SpecialPhotoData = {
     'ada kamu.',
   ],
   buttonText: 'Lihat',
-  image: '/images/special/video.mp4',
+  image: getAssetUrl('images/special/video.mp4'),
   caption: 'Senyum yang selalu menjadi tempat pulang ternyaman bagiku.',
   postRevealLines: [
     'Terima kasih sudah hadir di hidup aku Nurul Inayah.',
@@ -316,7 +317,7 @@ export const emotionalMomentData: EmotionalMomentData = {
     'Terima kasih sudah menjadi diri kamu yang tulus, apa adanya, dan luar biasa.',
     'Dan terima kasih karena pernah memilih untuk berjalan, berbagi cerita, dan melangkah bersamaku.',
   ],
-  photo: '/images/special/emotional-moment.jpg',
+  photo: getAssetUrl('images/special/emotional-moment.jpg'),
   caption: 'Momen berharga yang selalu terukir rapi di ingatanku.',
   closingLine: 'Semoga di umur 20 ini, kamu lebih sering menemukan alasan untuk tersenyum lebar daripada harus meneteskan air mata.',
 };
@@ -331,7 +332,7 @@ export const timelineEvents: TimelineEvent[] = [
     title: 'Pertama Kali Berinteraksi',
     story: 'Ini awal kita chatingan ya berinteraksi, ya karena HEEMPEEES..',
     caption: 'First impression abang ke kamu tuh orangnya lucu sih, soalnya baru awal chattingan aja uda disclaimer nama panggilan HAHAHA.',
-    image: '/images/memories/photo-01.jpg',
+    image: getAssetUrl('images/memories/photo-01.jpg'),
   },
   {
     year: 'Pertengahan 2025',
@@ -339,7 +340,7 @@ export const timelineEvents: TimelineEvent[] = [
     title: 'Mulai Semakin Dekat',
     story: 'Tahun di mana kita saling memahami lebih dalam. Belajar mengerti kekurangan dan saling menguatkan.',
     caption: 'Banyak kekurangan dan kelemahan yang abang dan kamu lewati berdua, tapi itu bikin kita semakin dewasa dan saling menguatkan.',
-    image: '/images/memories/photo-03.jpg',
+    image: getAssetUrl('images/memories/photo-03.jpg'),
   },
   {
     year: '2026 saat ini',
@@ -347,7 +348,7 @@ export const timelineEvents: TimelineEvent[] = [
     title: 'Hari Ini: 20 Tahun Nurul dede kecil',
     story: 'Hari ini kamu genap 20 tahun. Sebuah tonggak baru, kedewasaan baru, dan doa terbaik abang yang selalu menyertai kamu di setiap hembusan nafas.',
     caption: 'Hari istimewa untuk orang paling istimewa.',
-    image: '/images/memories/photo-07.jpg',
+    image: getAssetUrl('images/memories/photo-07.jpg'),
   },
 ];
 

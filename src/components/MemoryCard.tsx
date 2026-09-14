@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Camera, Calendar, MapPin, Sparkles } from 'lucide-react';
 import type { MemoryItem } from '../types/birthday';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface MemoryCardProps {
   memory: MemoryItem;
@@ -30,7 +31,7 @@ export const MemoryCard: React.FC<MemoryCardProps> = ({ memory, index }) => {
               </div>
             )}
             <motion.img
-              src={memory.image}
+              src={getAssetUrl(memory.image)}
               alt={memory.title}
               onLoad={() => setIsLoaded(true)}
               onError={() => setImgError(true)}

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, ArrowRight, Sparkles, Video } from 'lucide-react';
 import { specialPhotoData } from '../data/birthdayContent';
 import { BirthdayButton } from '../components/BirthdayButton';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface Chapter09SpecialPhotoProps {
   onNext: () => void;
@@ -53,7 +54,7 @@ export const Chapter09SpecialPhoto: React.FC<Chapter09SpecialPhotoProps> = ({ on
             {isVideo ? (
               <motion.video
                 ref={videoRef}
-                src={specialPhotoData.image}
+                src={getAssetUrl(specialPhotoData.image)}
                 autoPlay
                 loop
                 muted
@@ -69,7 +70,7 @@ export const Chapter09SpecialPhoto: React.FC<Chapter09SpecialPhotoProps> = ({ on
               />
             ) : (
               <motion.img
-                src={specialPhotoData.image}
+                src={getAssetUrl(specialPhotoData.image)}
                 alt="Special Moment"
                 onError={() => setMediaError(true)}
                 animate={{

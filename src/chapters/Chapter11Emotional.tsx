@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, ArrowRight, Camera } from 'lucide-react';
 import { emotionalMomentData } from '../data/birthdayContent';
 import { BirthdayButton } from '../components/BirthdayButton';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface Chapter11EmotionalProps {
   onNext: () => void;
@@ -105,7 +106,7 @@ export const Chapter11Emotional: React.FC<Chapter11EmotionalProps> = ({ onNext }
           >
             {!imgError ? (
               <motion.img
-                src={emotionalMomentData.photo}
+                src={getAssetUrl(emotionalMomentData.photo)}
                 alt="Emotional Memory"
                 onError={() => setImgError(true)}
                 animate={{ scale: [1, 1.08] }}

@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { timelineEvents } from '../data/birthdayContent';
 import { BirthdayButton } from '../components/BirthdayButton';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface Chapter12TimelineProps {
   onNext: () => void;
@@ -208,7 +209,7 @@ export const Chapter12Timeline: React.FC<Chapter12TimelineProps> = ({ onNext }) 
                   {!imgError ? (
                     <img
                       key={currentEvent.image}
-                      src={currentEvent.image}
+                      src={getAssetUrl(currentEvent.image)}
                       alt={currentEvent.title}
                       onError={() => setImgError(true)}
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { musicConfig } from '../data/birthdayContent';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export function useAudio() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -13,7 +14,7 @@ export function useAudio() {
 
   useEffect(() => {
     const audio = new Audio();
-    audio.src = musicConfig.file;
+    audio.src = getAssetUrl(musicConfig.file);
     audio.preload = 'auto';
     audio.volume = volume;
     audioRef.current = audio;
