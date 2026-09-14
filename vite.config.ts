@@ -8,7 +8,7 @@ export default defineConfig({
     tailwindcss(),
   ],
 
-  base: '/ultahulul/',
+  base: '/',
 
   server: {
     host: true,
